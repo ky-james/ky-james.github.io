@@ -1,44 +1,30 @@
 
 @media screen and (max-width: 600px){
-    header{
-        padding: 0 !important;
-        .h1.name{
-            font-size: 25px;
-
-        }
-    }
-    header .right-header{
-        padding: 2rem !important;
-        font-size: 15px;
-    }
-
     .header-content{
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(1, 1fr);
         padding-bottom: 6rem;
     }
 
     .left-header{
         .h-shape{
-            display: none;      
+            display: none;
         }
     }
-
     .right-header{
         grid-row: 1;
+        padding-right: 0rem !important;
         width: 90%;
         margin: 0 auto;
         .name{
             font-size: 2.5rem !important;
-        }
-        .footer{
-            display: none;
+            text-align: center;
+            padding-top: 3rem;
         }
     }
-
     .header-content .left-header .image{
-        display: none;
         margin: 0 auto;
-        width:90%;
+        width: 90%;
+        display: none;
     }
 
     .about-container{
@@ -85,9 +71,7 @@
         background-color: var(--color-grey-5);
         .control{
             margin: 1rem .3rem;
-
         }
-
     }
 
     .contact-container{
@@ -96,7 +80,6 @@
             margin-left: 0;
             margin-top: 2.5rem;
         }
-        
     }
     .contact-content-con .right-contact .i-c-2{
         flex-direction: column;
@@ -119,13 +102,18 @@
         }
         span{
             font-size: 15px;
+            color: var(--color-secondary);
         }
         .icon{
             grid-template-columns: 25px 1fr;
+            display: center;
         }
     }
-}
 
+    footer{
+        display:none;
+    }
+}
 
 .contact-content-con{
     flex-direction: column;
@@ -159,12 +147,8 @@
     }
     .icon{
         grid-template-columns: 25px 1fr;
-
     }
 }
-
-
-
 
 .main-title{
     h2{
@@ -177,4 +161,3 @@
         }
     }
 }
-
