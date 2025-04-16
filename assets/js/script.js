@@ -12,8 +12,8 @@ const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); });
 
 
-// technologies variables
-const technologiesItem = document.querySelectorAll("[data-technologies-item]");
+// hobbies variables
+const hobbiesItem = document.querySelectorAll("[data-hobbies-item]");
 const modalContainer = document.querySelector("[data-modal-container]");
 const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
 const overlay = document.querySelector("[data-overlay]");
@@ -24,30 +24,30 @@ const modalTitle = document.querySelector("[data-modal-title]");
 const modalText = document.querySelector("[data-modal-text]");
 
 // modal toggle function
-const technologiesModalFunc = function () {
+const hobbiesModalFunc = function () {
   modalContainer.classList.toggle("active");
   overlay.classList.toggle("active");
 }
 
 // add click event to all modal items
-for (let i = 0; i < technologiesItem.length; i++) {
+for (let i = 0; i < hobbiesItem.length; i++) {
 
-  technologiesItem[i].addEventListener("click", function () {
+  hobbiesItem[i].addEventListener("click", function () {
 
-    modalImg.src = this.querySelector("[data-technologies-avatar]").src;
-    modalImg.alt = this.querySelector("[data-technologies-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-technologies-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-technologies-text]").innerHTML;
+    modalImg.src = this.querySelector("[data-hobbies-avatar]").src;
+    modalImg.alt = this.querySelector("[data-hobbies-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-hobbies-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-hobbies-text]").innerHTML;
 
-    technologiesModalFunc();
+    hobbiesModalFunc();
 
   });
 
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", technologiesModalFunc);
-overlay.addEventListener("click", technologiesModalFunc);
+modalCloseBtn.addEventListener("click", hobbiesModalFunc);
+overlay.addEventListener("click", hobbiesModalFunc);
 
 
 // contact form variables
